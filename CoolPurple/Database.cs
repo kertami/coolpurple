@@ -18,7 +18,7 @@ namespace CoolPurple
         private Database() {
             connStr.Server = "127.0.0.1";
             connStr.UserID = "root";
-            connStr.Password = "";
+            connStr.Password = "prot";
             connStr.Database = "CoolPurple";
 
 
