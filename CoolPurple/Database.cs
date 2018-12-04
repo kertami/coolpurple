@@ -21,6 +21,7 @@ namespace CoolPurple
             connStr.Password = "prot";
             connStr.Database = "CoolPurple";
 
+
             conn = new MySqlConnection(connStr.ToString());
         }
 
