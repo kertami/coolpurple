@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoolPurple"
         mc:Ignorable="d"
-        Title="Inloggen" Height="334.021" Width="245.619">
+        Title="Inloggen" Height="334.021" Width="245.619" ResizeMode="NoResize">
     <Grid>
         <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
             <Label Name="labelUsername" Content="Username"  />
