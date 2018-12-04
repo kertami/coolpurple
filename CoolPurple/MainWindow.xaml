@@ -8,6 +8,7 @@
         Title="Inloggen" Height="334.021" Width="245.619" ResizeMode="NoResize">
     <Grid>
         <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
+
             <Label Name="labelUsername" Content="Username"  />
             <TextBox Name="textBoxUsername" Width="200"/>
             <Label Name="labelPassword" Content="Password" />
