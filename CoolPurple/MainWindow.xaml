@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoolPurple"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Inloggen" Height="334.021" Width="245.619">
     <Grid>
-        <Label Content="Test" />
+        <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
+            <Label Name="labelUsername" Content="Username"  />
+            <TextBox Name="textBoxUsername" Width="200"/>
+            <Label Name="labelPassword" Content="Password" />
+            <TextBox Name="TextBoxPassword" Width="200"/>
+            <Button Content="Inloggen" Margin="0,20,0,0"></Button>
+        </StackPanel>
+        
     </Grid>
 </Window>
