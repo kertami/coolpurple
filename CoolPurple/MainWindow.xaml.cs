@@ -22,6 +22,10 @@ namespace CoolPurple
         public MainWindow()
         {
             InitializeComponent();
+
+            DBConnectionCustomer  dbc =  new DBConnectionCustomer();
+
+            dbc.findAll();
         }
     }
 }
