@@ -19,13 +19,15 @@ namespace CoolPurple
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DBConnectionCustomer dbc;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            DBConnectionCustomer  dbc =  new DBConnectionCustomer();
+            dbc =  new DBConnectionCustomer();
 
-            dbc.findAll();
+            dbc.find(1);
         }
     }
 }

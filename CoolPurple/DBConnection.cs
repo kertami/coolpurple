@@ -1,23 +1,43 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoolPurple
 {
     abstract class DBConnection<T> where T : new()
     {
 
-        protected String tableName;
+        protected String tableName, tableID;
         private Type workingClass ;
 
         public DBConnection()
         {
             workingClass = typeof(T);
             tableName = workingClass.Name;
+            tableID = tableName + "ID";
+        }
+
+
+
+        public T find (object id)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "SELECT * FROM " + tableName + " WHERE "+tableID+" = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+
+            MySqlDataReader result = Database.getInstance().executeQuery(cmd);
+
+            T obj = new T();
+            while (result.Read())
+            {   
+                foreach (PropertyInfo propertyInfo in workingClass.GetProperties())
+                {
+                    propertyInfo.SetValue(obj, result[propertyInfo.Name]);
+                }
+            }
+
+            return obj;
         }
 
         public List<T> findAll()
