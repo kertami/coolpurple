@@ -5,14 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoolPurple"
         mc:Ignorable="d"
-        Title="Inloggen" Height="334.021" Width="245.619">
+        Title="Login" Height="330" Width="240" Background="#FF353535">
     <Grid>
         <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
-            <Label Name="labelUsername" Content="Username"  />
-            <TextBox Name="textBoxUsername" Width="200"/>
-            <Label Name="labelPassword" Content="Password" />
-            <TextBox Name="TextBoxPassword" Width="200"/>
-            <Button Content="Inloggen" Margin="0,20,0,0"></Button>
+
+            <Label Name="labelUsername" 
+                   Content="Username" Foreground="White"  />
+
+            <TextBox Name="textBoxUsername" 
+                     Width="200" Height="30" Background="#FF595959" BorderBrush="#FF6C6C6C" />
+
+            <Label Name="labelPassword" Margin="0,20,0,0"
+                   Content="Password" Foreground="White"  />
+
+            <TextBox Name="TextBoxPassword" 
+                     Width="200" Height="30" Background="#FF595959" BorderBrush="#FF6C6C6C"/>
+
+            <Button Name="buttonLogin" Content="Log me in please!" 
+                    Margin="0,40,0,0" Width="200" Height="30" 
+                    Background="#FF606060"  Foreground="White"></Button>
+
+          
         </StackPanel>
 
     </Grid>
